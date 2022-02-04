@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bioscoop", "Bioscoop\Biosco
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Domain", "Core.Domain\Core.Domain.csproj", "{E9333BD6-6B98-4D59-8ADD-E7D5C18AB777}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Domain.Test", "Core.Domain.Test\Core.Domain.Test.csproj", "{F11BC0F9-543B-4A75-B687-F5514D7D66D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -21,6 +23,10 @@ Global
 		{E9333BD6-6B98-4D59-8ADD-E7D5C18AB777}.Debug|anycpu.Build.0 = Debug|Any CPU
 		{E9333BD6-6B98-4D59-8ADD-E7D5C18AB777}.Release|anycpu.ActiveCfg = Release|Any CPU
 		{E9333BD6-6B98-4D59-8ADD-E7D5C18AB777}.Release|anycpu.Build.0 = Release|Any CPU
+		{F11BC0F9-543B-4A75-B687-F5514D7D66D8}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{F11BC0F9-543B-4A75-B687-F5514D7D66D8}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{F11BC0F9-543B-4A75-B687-F5514D7D66D8}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{F11BC0F9-543B-4A75-B687-F5514D7D66D8}.Release|anycpu.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
