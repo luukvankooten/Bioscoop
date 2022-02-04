@@ -9,5 +9,10 @@ namespace Core.Domain.Models
         {
             this.title = title;
         }
+
+        public void AddScreening(MovieScreening screening)
+        {
+
+        }
     }
 }

@@ -15,5 +15,10 @@ namespace Core.Domain.Models
             this.dateAndTime = dateAndTime;
             this.pricePerSeat = pricePerSeat;
         }
+
+        public double getPrice()
+        {
+            return 0.0;
+        }
     }
 }

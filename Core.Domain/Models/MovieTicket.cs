@@ -18,5 +18,19 @@ namespace Core.Domain.Models
             this.seatNr = seatNr;
             this.isPremium = isPremium;
         }
+
+
+        public bool IsPremiumTicket()
+        {
+            return isPremium;
+        }
+
+
+        public double GetPrice()
+        {
+            return 0.0;
+        }
+
+        
     }
 }
