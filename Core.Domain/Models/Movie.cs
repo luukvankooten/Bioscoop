@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Core.Domain.Models
 {
@@ -17,6 +16,11 @@ namespace Core.Domain.Models
         public void AddScreening(MovieScreening screening)
         {
             movieScreenings.Add(screening);
+        }
+
+        public override string ToString()
+        {
+            return $"title: {this.title}";
         }
     }
 }

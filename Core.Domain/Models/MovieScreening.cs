@@ -23,7 +23,12 @@ namespace Core.Domain.Models
 
         public double GetPrice()
         {
-            return 0.0;
+            return pricePerSeat;
+        }
+
+        public override string ToString()
+        {
+            return $"dateAndTime: {this.dateAndTime}\tpricePerSeat: {this.pricePerSeat}\nmovie: {Movie}";
         }
     }
 }
