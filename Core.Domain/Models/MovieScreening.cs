@@ -3,7 +3,7 @@ namespace Core.Domain.Models
 {
     public class MovieScreening
     {
-        private readonly Movie movie;
+        public Movie Movie { get; }
 
         private readonly DateTime dateAndTime;
 
@@ -11,12 +11,17 @@ namespace Core.Domain.Models
 
         public MovieScreening(Movie movie, DateTime dateAndTime, double pricePerSeat)
         {
-            this.movie = movie;
+            Movie = movie;
             this.dateAndTime = dateAndTime;
             this.pricePerSeat = pricePerSeat;
         }
 
-        public double getPrice()
+        public DateTime GetDateTime()
+        {
+            return dateAndTime;
+        }
+
+        public double GetPrice()
         {
             return 0.0;
         }

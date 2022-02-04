@@ -3,7 +3,7 @@ namespace Core.Domain.Models
 {
     public class MovieTicket
     {
-        private readonly MovieScreening movieScreening;
+        public MovieScreening MovieScreening { get; }
 
         private readonly int rowNr;
 

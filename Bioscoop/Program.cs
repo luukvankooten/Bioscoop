@@ -18,9 +18,6 @@ namespace Bioscoop
             var ticket = new MovieTicket(movieScreen, 1, 27, true);
 
             order.AddSeatReservation(ticket);
-
-
-
         }
     }
 }

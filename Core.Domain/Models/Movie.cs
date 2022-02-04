@@ -7,7 +7,6 @@ namespace Core.Domain.Models
     {
         private readonly string title;
 
-
         private ICollection<MovieScreening> movieScreenings;
 
         public Movie(string title)
