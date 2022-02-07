@@ -1,10 +1,10 @@
-
 name: Build
 on:
   push:
     branches:
       - main
-      
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   build:
     name: Build
@@ -43,5 +43,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"luukvankooten_Bioscoop" /o:"luukvankooten" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet clean
+          <insert_your_build_command>
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
