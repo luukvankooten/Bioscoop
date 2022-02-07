@@ -9,6 +9,7 @@ namespace Core.Domain.Test
         public void TestCase()
         {
 
+
             Assert.True(true);
         }
     }
