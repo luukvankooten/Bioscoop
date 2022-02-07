@@ -21,8 +21,8 @@ namespace Bioscoop
             order.AddSeatReservation(ticket1);
             order.AddSeatReservation(ticket2);
 
-            order.Export(TicketExportFormat.JSON);
-            order.Export(TicketExportFormat.PLAINTEXT);
+            order.PerformExport(TicketExportFormat.JSON);
+            order.PerformExport(TicketExportFormat.PLAINTEXT);
 
             Console.WriteLine("Press a key to exit...");
             Console.ReadKey();

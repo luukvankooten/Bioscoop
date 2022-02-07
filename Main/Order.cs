@@ -11,7 +11,6 @@ namespace Core.Domain.Models
 {
     public class Order
     {
-        public IExportTo
         private readonly int orderNr;
 
         private readonly bool isStudentOrder;
@@ -88,6 +87,7 @@ namespace Core.Domain.Models
             }
             else if (exportFormat == TicketExportFormat.JSON)
             {
+
             }
         }
 
