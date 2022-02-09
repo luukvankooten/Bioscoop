@@ -18,7 +18,7 @@ namespace Bioscoop
             order.AddSeatReservation(ticket1);
             order.AddSeatReservation(ticket2);
 
-            order.SetCalculateBehaviour(new CalculateOrderPrice());
+            order.SetCalculateBehaviour(new OrderPrice());
             order.PerformCalculate();
 
             order.SetExportBehaviour(new ExportToJSON());

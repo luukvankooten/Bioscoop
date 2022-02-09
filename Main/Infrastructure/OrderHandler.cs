@@ -1,12 +1,10 @@
 ﻿using Core.DomainServices;
-using System;
-using System.Linq;
 
 namespace Core.Domain.Models.Infrastructure
 {
     public class OrderHandler
     {
-        private ICalculateTo _calculateBehaviour;
+        private IPrice _calculateBehaviour;
         private IExportTo _exportBehaviour;
         private readonly Order _order;
 
@@ -44,7 +42,7 @@ namespace Core.Domain.Models.Infrastructure
             _exportBehaviour = exportBehaviour;
         }
 
-        public void SetCalculateBehaviour(ICalculateTo calculateBehaviour)
+        public void SetCalculateBehaviour(IPrice calculateBehaviour)
         {
             _calculateBehaviour = calculateBehaviour;
         }

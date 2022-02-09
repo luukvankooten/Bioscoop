@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Core.Domain.Behaviour;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Core.Domain.Models
 {
-    public class Order
+    public class Order : Calculable<Order>
     {
         public int OrderNr { get; }
         public double OrderPrice { get; private set; }
