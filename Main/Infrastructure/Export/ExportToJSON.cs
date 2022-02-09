@@ -4,7 +4,7 @@ using Newtonsoft.Json.Serialization;
 using System.IO;
 using System.Reflection;
 
-namespace Main
+namespace Main.Infrastructure.Export
 {
     public class ExportToJSON : IExportTo
     {

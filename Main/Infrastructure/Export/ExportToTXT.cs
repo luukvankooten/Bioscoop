@@ -1,7 +1,7 @@
 ﻿using Core.DomainServices;
 using System.IO;
 
-namespace Main
+namespace Main.Infrastructure.Export
 {
     public class ExportToTXT : IExportTo
     {
@@ -13,7 +13,7 @@ namespace Main
                 if (!Directory.Exists(dir))
                     Directory.CreateDirectory(dir);
 
-                File.WriteAllText(Path.Combine(dir, $"{Path.GetFileNameWithoutExtension(Path.GetRandomFileName())}.txt"), ToString());
+                File.WriteAllText(Path.Combine(dir, $"{Path.GetFileNameWithoutExtension(Path.GetRandomFileName())}.txt"), obj.ToString());
                 return true;
             }
             catch

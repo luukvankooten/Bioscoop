@@ -1,5 +1,8 @@
 ﻿using System;
 using Core.Domain.Models;
+using Core.Domain.Models.Infrastructure;
+using Main.Infrastructure.Calculation;
+using Main.Infrastructure.Export;
 
 namespace Bioscoop
 {
@@ -7,22 +10,21 @@ namespace Bioscoop
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var movieScreen = new MovieScreening(new Movie("Johnny Wick chapter 3."), new DateTime(2020, 02, 01, 20, 0, 0), 13.0);
+            OrderHandler order = new OrderHandler(new Order(0, true));
 
-
-            var movie = new Movie("Johnny Wick chapter 3.");
-
-            var movieScreen = new MovieScreening(movie, new DateTime(2020, 02, 01, 20, 0, 0), 13.0);
-            var order = new Order(0, true);
-
-            var ticket1 = new MovieTicket(movieScreen, 1, 27, true);
-            var ticket2 = new MovieTicket(movieScreen, 1, 27, true);
-
+            MovieTicket ticket1 = new MovieTicket(movieScreen, 1, 27, true);
+            MovieTicket ticket2 = new MovieTicket(movieScreen, 1, 27, true);
             order.AddSeatReservation(ticket1);
             order.AddSeatReservation(ticket2);
 
-            order.PerformExport(TicketExportFormat.JSON);
-            order.PerformExport(TicketExportFormat.PLAINTEXT);
+            order.SetCalculateBehaviour(new CalculateOrderPrice());
+            order.PerformCalculate();
+
+            order.SetExportBehaviour(new ExportToJSON());
+            order.PerformExport();
+            order.SetExportBehaviour(new ExportToTXT());
+            order.PerformExport();
 
             Console.WriteLine("Press a key to exit...");
             Console.ReadKey();
