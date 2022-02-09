@@ -10,7 +10,7 @@ namespace Bioscoop
     {
         public static void Main(string[] args)
         {
-            var movieScreen = new MovieScreening(new Movie("Johnny Wick chapter 3."), new DateTime(2020, 02, 01, 20, 0, 0), 13.0);
+            MovieScreening movieScreen = new MovieScreening(new Movie("Johnny Wick chapter 3."), new DateTime(2020, 02, 01, 20, 0, 0), 13.0);
             OrderHandler order = new OrderHandler(new Order(0, true));
 
             MovieTicket ticket1 = new MovieTicket(movieScreen, 1, 27, true);
